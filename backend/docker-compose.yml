@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  node1:
+    build: .
+    environment:
+      - NODE_PORT=5001
+      - NODE_NAME=node1
+    ports:
+      - "5001:5001"
+
+  node2:
+    build: .
+    environment:
+      - NODE_PORT=5002
+      - NODE_NAME=node2
+    ports:
+      - "5002:5002"
+
+  node3:
+    build: .
+    environment:
+      - NODE_PORT=5003
+      - NODE_NAME=node3
+    ports:
+      - "5003:5003"
+
+  node4:
+    build: .
+    environment:
+      - NODE_PORT=5004
+      - NODE_NAME=node4
+    ports:
+      - "5004:5004"

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain Voting System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Blockchain Voting System</h1>
+
+      <section class="node-select">
+        <label for="nodeSelect"> Pilih Node:</label>
+        <select id="nodeSelect">
+          <option value="http://localhost:5001">Node 1 (5001)</option>
+          <option value="http://localhost:5002">Node 2 (5002)</option>
+          <option value="http://localhost:5003">Node 3 (5003)</option>
+          <option value="http://localhost:5004">Node 4 (5004)</option>
+        </select>
+      </section>
+
+      <section class="vote-section">
+        <h2>Kirim Suara</h2>
+        <input type="text" id="voterId" placeholder="ID Pemilih (unik)" />
+        <input type="text" id="candidate" placeholder="Nama Kandidat" />
+        <button id="btnVote">Kirim Vote</button>
+        <p id="voteMessage" class="message"></p>
+      </section>
+
+      <section class="action-section">
+        <button id="btnMine">Tambang Manual (tanpa tunggu 3 menit)</button>
+        <button id="btnResults">Lihat Hasil Voting</button>
+        <button id="btnStatus">Cek Status Semua Node</button>
+      </section>
+
+      <section class="result-section">
+        <h2>Hasil Voting</h2>
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Kandidat</th>
+              <th>Jumlah Suara</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="status-section">
+        <h2>Status dan Chain Tiap Node</h2>
+        <div id="statusOutput" class="status-container"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
