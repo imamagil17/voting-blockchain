@@ -49,7 +49,7 @@ def auto_mine():
             print(" [AUTO-MINE] Blok baru berhasil ditambang otomatis!")
             blockchain.broadcast_chain()
     else:
-        print("⏹️ [AUTO-MINE] Tidak ada vote yang tertunda.")
+        print(" [AUTO-MINE] Tidak ada vote yang tertunda.")
     is_mining = False
 
 @app.route("/", methods=["GET"])
