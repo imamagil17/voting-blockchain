@@ -14,7 +14,7 @@ node_identifier = str(uuid4()).replace("-", "")
 blockchain = Blockchain(delay_seconds=180)
 
 def auto_register_nodes():
-    print(f"🔗 [Auto-Register] Node ini: {NODE_NAME}:{NODE_PORT}")
+    print(f"[Auto-Register] Node ini: {NODE_NAME}:{NODE_PORT}")
     for node in ALL_NODES:
         if f":{NODE_PORT}" in node:
             continue
@@ -40,10 +40,10 @@ def auto_mine():
         return
     is_mining = True
 
-    print(" [AUTO-MINE] Menunggu 3 menit sebelum menambang...")
+    print("[AUTO-MINE] Menunggu 3 menit sebelum menambang...")
     time.sleep(blockchain.delay_seconds)
     if blockchain.pending_votes:
-        print(" [AUTO-MINE] Menambang vote yang tertunda...")
+        print("[AUTO-MINE] Menambang vote yang tertunda...")
         block = blockchain.mine_pending_votes(source="AUTO")
         if block:
             print(" [AUTO-MINE] Blok baru berhasil ditambang otomatis!")

@@ -9,7 +9,6 @@
   <body>
     <div class="container">
       <h1>Blockchain Voting System</h1>
-
       <section class="node-select">
         <label for="nodeSelect"> Pilih Node:</label>
         <select id="nodeSelect">
@@ -49,6 +48,12 @@
 
       <section class="status-section">
         <h2>Status dan Chain Tiap Node</h2>
+        <div class="status-navigation">
+          <button id="btnPrev" class="circle-btn">❮</button>
+          <span id="currentNodeLabel">Node 1 (http://localhost:5001)</span>
+          <button id="btnNext" class="circle-btn">❯</button>
+        </div>
+
         <div id="statusOutput" class="status-container"></div>
       </section>
     </div>
